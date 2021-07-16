@@ -1,0 +1,46 @@
+.character {
+  position: relative;
+  background-color: #83d2e4;
+  border: 4px solid #83d2e4;
+  border-radius: 25px;
+  cursor: pointer;
+  padding-bottom: 12px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+}
+
+.character figure {
+  margin: 0;
+}
+
+.character figcaption {
+  color: #ffffff;
+  font-weight: 600;
+  padding: 10px 3px 0;
+}
+
+.character img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0 0px;
+}
+
+.character-info {
+  position: absolute;
+  top: -16px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fdf888;
+  display: flex;
+  border-radius: 20px;
+  opacity: 0;
+}
+
+.character-info:hover {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
