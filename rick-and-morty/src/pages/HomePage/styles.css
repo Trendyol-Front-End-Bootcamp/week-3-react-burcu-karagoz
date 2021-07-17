@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+
+  width: 50%;
+  margin: 30px auto;
+}
+
+.btn-container button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  width: 100px;
+  border: 2px solid var(--text-green-color);
+  background: none;
+  color: var(--primary-color-yellow);
+}
+
+.btn-container button::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 2px;
+  border-right: 8px solid var(--primary-color-blue);
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+}

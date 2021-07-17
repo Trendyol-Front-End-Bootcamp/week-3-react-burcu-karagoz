@@ -5,6 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.8)),
+    #111 url(https://source.unsplash.com/RF4p4rTM-2s/1280x720) no-repeat center
+      fixed;
+  background-size: cover;
 }
 
 code {
@@ -14,8 +19,27 @@ code {
 
 ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 a {
   text-decoration: none;
+}
+
+input,
+select,
+button {
+  border: none;
+  outline: none;
+}
+
+:root {
+  --primary-color-yellow: #fdf888;
+  --primary-color-blue: #83d2e4;
+  --text-green-color: #337073;
+  --text-dark-color: #808080;
+  --text-light-color: #949494;
+  --white-color: #ffffff;
+  --bg-color: #faf9ed;
 }

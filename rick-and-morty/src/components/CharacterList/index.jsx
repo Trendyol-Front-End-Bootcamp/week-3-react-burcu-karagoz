@@ -8,10 +8,10 @@ import './styles.css';
 export const CharacterList = () => {
   const appContext = useContext(AppContext);
 
-  const { getCharacters, characters, page } = appContext;
+  const { getCharacters, characters } = appContext;
 
   useEffect(() => {
-    getCharacters(page);
+    getCharacters(1);
   }, []);
 
   return (

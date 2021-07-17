@@ -1,4 +1,4 @@
-import React, { useEffect, useContext } from 'react';
+import React, { useEffect, useContext} from 'react';
 
 import { AppContext } from "../../context/appContext";
 
@@ -9,13 +9,20 @@ export const CharacterDetail = (props) => {
   const appContext = useContext(AppContext);
   const { getCharacter, character } = appContext;
 
+  const getEpisodes = () => {
+    const episodes = character.episode.map((ep) => {
+          return ep.slice(ep.lastIndexOf('/') + 1);
+    })
+    return episodes;
+}
+
   useEffect(() => {
     getCharacter(props.match.params.id);
     // eslint-disable-next-line
   }, []);
 
   if(character) {
-    const { name, image, species, gender, status, location, origin, characterEpisodes }= character;
+    const { name, image, species, gender, status, location, origin }= character;
 
     return (
       <>
@@ -31,7 +38,9 @@ export const CharacterDetail = (props) => {
             <li><span className="info-title">Status</span>:<span>{status}</span></li>
             <li><span className="info-title">Location</span>:<span>{location.name}</span></li>
             <li><span className="info-title">Origin</span>:<span>{origin.name}</span></li>
-            <li><span className="info-title">Episodes</span>:<span>{characterEpisodes}</span></li>
+            <li><span className="info-title">Episodes</span>:
+              {getEpisodes().slice(-5).map(episode => <span className="episode" key={episode}>{episode}</span>)}
+            </li>
           </ul>
         </div>
       </>
