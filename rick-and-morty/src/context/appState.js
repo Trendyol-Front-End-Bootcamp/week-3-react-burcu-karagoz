@@ -76,7 +76,7 @@ export const AppState = (props) => {
                 page: state.page,
                 getCharacters,
                 getCharacter,
-                searchCharacters
+                searchCharacters,
             }}
         >
             {props.children}
