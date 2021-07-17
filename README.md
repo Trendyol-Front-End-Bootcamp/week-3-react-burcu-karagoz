@@ -5,4 +5,4 @@
 
 
 ### Character Detail Page
-![Character Detail](https://user-images.githubusercontent.com/33669461/126049424-5d2a6956-a155-40c9-a747-c703b4dad66c.png)
+![Character Detail](https://user-images.githubusercontent.com/33669461/126049575-560ff9dd-ca7f-4761-beba-10e9fd655efd.png)
