@@ -3,6 +3,8 @@ import React, { useContext } from 'react';
 import { AppContext } from "../../context/appContext";
 import { CharacterList } from '../../components/CharacterList';
 import { Search } from '../../components/Search';
+import { NoResult } from '../../pages/NoResult';
+
 
 import "./styles.css";
 
@@ -12,12 +14,12 @@ export const HomePage = () => {
 
   const appContext = useContext(AppContext);
 
-  const { getCharacters } = appContext;
+  const { getCharacters, characters } = appContext;
 
   return(
     <div className="container">
       <Search />
-      <CharacterList />
+      {characters ? <CharacterList /> : <NoResult />}
       <div className="btn-container">
         <button onClick={()=> getCharacters(page<=0 ? 1 : page-1)}>prev</button>
         <button onClick={()=> getCharacters(page+1)}>next</button>
