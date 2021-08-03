@@ -10,6 +10,7 @@ body {
     #111 url(https://source.unsplash.com/RF4p4rTM-2s/1280x720) no-repeat center
       fixed;
   background-size: cover;
+  height: 100vh;
 }
 
 code {
@@ -32,6 +33,10 @@ select,
 button {
   border: none;
   outline: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 :root {

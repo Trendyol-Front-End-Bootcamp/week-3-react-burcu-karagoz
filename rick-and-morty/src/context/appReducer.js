@@ -11,7 +11,6 @@ export const AppReducer = (state, action) => {
             return {
                 ...state,
                 characters: payload.results,
-                // page: payload?.info?.pages,
             };
         case GET_CHARACTER:
             return {
