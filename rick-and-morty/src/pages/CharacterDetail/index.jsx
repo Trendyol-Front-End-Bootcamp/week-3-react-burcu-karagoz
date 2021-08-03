@@ -14,7 +14,7 @@ export const CharacterDetail = (props) => {
           return ep.slice(ep.lastIndexOf('/') + 1);
     })
     return episodes;
-}
+  }
 
   useEffect(() => {
     getCharacter(props.match.params.id);
